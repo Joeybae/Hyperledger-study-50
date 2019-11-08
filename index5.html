@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Misae-Zero</title>
+  </head>
+
+  <script>
+    var index = 0;
+    window.onload = function(){
+      slideShow();
+    }
+    function slideShow(){
+      var i;
+      var x = document.getElementsByClassName("slide1");
+      for (i=0; i < x.length; i++){
+        x[i].style.display = "none";
+      }
+      index++;
+      if (index > x.length){
+        index = 1;
+      }
+      x[index-1].style.display = "block";
+      setTimeout(slideShow, 3000);
+    }
+  </script>
+
+  <body>
+    <div>
+      <a href="https://naver.com"><img class="slide1" src="home.png"></a>
+      <a href="https://daum.net"><img class="slide1" src="query.jpg"></a>
+      <a href="https://google.com"><img class="slide1" src="create.jpg"></a>
+      <a href="https://yahoo.com"><img class="slide1" src="change.jpg"></a>
+    </div>
+
+    <style>
+      div{
+        width: 200px;
+        height: 200px;  
+      }
+    </style>
+  </body>
+</html>
