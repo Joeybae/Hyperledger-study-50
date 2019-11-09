@@ -3,6 +3,72 @@
   <head>
     <meta charset="UTF-8">
     <title>Misae-Zero</title>
+    <style type="text/css">
+      ul,
+      ol,
+      li {
+        list-style: none;
+      }
+
+      img {
+        vertical-align: top;
+        width: 100%;
+        height: 100%;
+        border: none;
+      }
+
+      .slide {
+        position: relative;
+        padding-top: 50px;
+        overflow: hidden;
+      }
+
+      .panel {
+        width: 400%;
+      }
+
+      .panel:after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+
+      .panel>li {
+        width: 25%;
+        height: 200px;
+        float: left;
+        position: relative;
+      }
+
+      .dot:after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+
+      .dot {
+        position: absolute;
+        left: 50%;
+        bottom: 10%;
+        transform: translateX(-50%);
+      }
+
+      .dot>li {
+        float: left;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        background-color: #fff;
+        margin-left: 10px;
+        margin-right: 10px;
+        text-indent: -9999px;
+        cursor: pointer;
+      }
+
+      .dot>li.on {
+        background-color: #342f2f;
+      }
+    </style>
   </head>
 
   <script>
@@ -26,11 +92,19 @@
   </script>
 
   <body>
-    <div>
-      <a href="https://naver.com"><img class="slide1" src="home.png"></a>
-      <a href="https://daum.net"><img class="slide1" src="query.jpg"></a>
-      <a href="https://google.com"><img class="slide1" src="create.jpg"></a>
-      <a href="https://yahoo.com"><img class="slide1" src="change.jpg"></a>
+    <div class="slide">
+      <ul class="panel">
+        <li><a href="https://naver.com"><img class="slide1" src="home.png"></a></li>
+        <li><a href="https://daum.net"><img class="slide1" src="query.jpg"></a></li>
+        <li><a href="https://google.com"><img class="slide1" src="create.jpg"></a></li>
+        <li><a href="https://yahoo.com"><img class="slide1" src="change.jpg"></a></li>
+      </ul>
+      <ul class="dot">
+        <li class="on">슬라이드 버튼1번</li>
+        <li>슬라이드 버튼2번</li>
+        <li>슬라이드 버튼3번</li>
+        <li>슬라이드 버튼4번</li>
+      </ul>
     </div>
 
     <style>

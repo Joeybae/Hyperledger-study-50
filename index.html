@@ -15,7 +15,7 @@
          }
          .slider_item{
              width: 100%;
-             height: 500px;
+             height: 200px;
              overflow: hidden;
              position: absolute;
              z-index: 0;
@@ -30,20 +30,18 @@
              z-index: 1;
              transform: none;
          }
+}
      </style>
 </head>
 <body>
-     <h1>Javascript Example 001 - 자동 슬라이더</h1>
-     <p>자바스크립트와 CSS만으로 Carousel Slider 효과를 구현해 봅니다. </p>
-
     <!-- Slider -->
      <div class="slider">
          <!-- items -->
-         <div class="slider_item"><img src="home.png"></div>
-         <div class="slider_item"><img src="create.jpg"></div>
-         <div class="slider_item"><img src="query.jpg"></div>
-         <div class="slider_item"><img src="change.jpg"></div>
-     </div>
+            <a href="https://naver.com"><div class="slider_item"><img src="home.png"></div></a>
+            <a href="https://daum.com"><div class="slider_item"><img src="create.jpg"></div></a>
+            <a href="https://google.com"><div class="slider_item"><img src="query.jpg"></div></a>
+            <a href="https://yahoo.com"><div class="slider_item"><img src="change.jpg"></div></a>
+        </div>
 
     <script type="text/javascript">
          const showing_class = "showing";
@@ -68,7 +66,7 @@
          }
 
         slide();
-         setInterval(slide, 3000); // 1000은 1초
+        setInterval(slide, 3000); // 1000은 1초
         
      </script>
 
